@@ -6,20 +6,20 @@ public class Empleado {
     private String nombre;
     private String apellido;
     private String correo;
-    private String telefono;
     private String fecha_Contratacion;
+    private String telefono;
     private int salario;
 
     public Empleado() {
     }
 
-    public Empleado(int id_Empleado, String nombre,String apellido, String correo, String telefono, String fecha_Contratacion, int salario) {
+    public Empleado(int id_Empleado, String nombre, String apellido, String correo, String fecha_Contratacion, String telefono, int salario) {
         this.id_Empleado = id_Empleado;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
-        this.telefono = telefono;
         this.fecha_Contratacion = fecha_Contratacion;
+        this.telefono = telefono;
         this.salario = salario;
     }
 
@@ -39,20 +39,20 @@ public class Empleado {
         this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
     public String getCorreo() {
         return correo;
     }
 
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
     public String getFecha_Contratacion() {
@@ -63,6 +63,14 @@ public class Empleado {
         this.fecha_Contratacion = fecha_Contratacion;
     }
 
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
     public int getSalario() {
         return salario;
     }
@@ -71,18 +79,11 @@ public class Empleado {
         this.salario = salario;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     @Override
     public String toString() {
-        return "Empleado{" + "id_Empleado=" + id_Empleado + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", telefono=" + telefono + ", fecha_Contratacion=" + fecha_Contratacion + ", salario=" + salario + '}';
+        return "Empleado{" + "id_Empleado=" + id_Empleado + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", fecha_Contratacion=" + fecha_Contratacion + ", telefono=" + telefono + ", salario=" + salario + '}';
     }
 
- 
+    
+    
 }

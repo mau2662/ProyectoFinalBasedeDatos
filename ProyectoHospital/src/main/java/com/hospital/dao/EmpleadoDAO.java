@@ -20,18 +20,18 @@ public class EmpleadoDAO {
 
     public String agregarEmpleado(Connection con, Empleado emp) {
         PreparedStatement pst = null;
-        String sql = "INSERT INTO GENERICO.EMPLEADO (ID_EMPLEADO, NOMBRE"
-                + "APELLIDO, CORREO,TELEFONO,FECHA_CONTRATACION, SALARIO)"
-                + "VALUES(EMPLEADO_SEQ.NEXVAL,?,?,?,?,?)";
+        String sql = "INSERT INTO GENERICO.EMPLEADO VALUES(3,?,?,?,?,?,?)";
+                
+                
 
         try {
             pst = con.prepareStatement(sql);
             pst.setString(1, emp.getNombre());
-            pst.setString(1, emp.getApellido());
-            pst.setString(2, emp.getCorreo());
-            pst.setString(3, emp.getFecha_Contratacion());
-            pst.setString(4, emp.getTelefono());
-            pst.setInt(5, emp.getSalario());
+            pst.setString(2, emp.getApellido());
+            pst.setString(3, emp.getCorreo());
+            pst.setString(4, emp.getFecha_Contratacion());
+            pst.setString(5, emp.getTelefono());
+            pst.setInt(6, emp.getSalario());
             mensaje = "Guardado Correctamente";
             pst.execute();
             pst.close();
@@ -54,12 +54,12 @@ public class EmpleadoDAO {
         try {
             pst = con.prepareStatement(sql);
             pst.setString(1, emp.getNombre());
-            pst.setString(1, emp.getApellido());
-            pst.setString(2, emp.getCorreo());
-            pst.setString(3, emp.getFecha_Contratacion());
-            pst.setString(4, emp.getTelefono());
-            pst.setInt(5, emp.getSalario());
-            pst.setInt(6, emp.getId_Empleado());
+            pst.setString(2, emp.getApellido());
+            pst.setString(3, emp.getCorreo());
+            pst.setString(4, emp.getFecha_Contratacion());
+            pst.setString(5, emp.getTelefono());
+            pst.setInt(6, emp.getSalario());
+            pst.setInt(7, emp.getId_Empleado());
             mensaje = "Actualizado Correctamente";
             pst.execute();
             pst.close();
@@ -82,13 +82,13 @@ public class EmpleadoDAO {
         try {
             pst = con.prepareStatement(sql);
             pst.setInt(1, id);
-            mensaje = "Actualizado Correctamente";
+            mensaje = "Eliminado Correctamente";
             pst.execute();
             pst.close();
 
         } catch (SQLException e) {
 
-            mensaje = "No se pudo Actualizar Correctamente \n " + e.getMessage();
+            mensaje = "No se pudo eliminar Correctamente \n " + e.getMessage();
 
         }
         return mensaje;

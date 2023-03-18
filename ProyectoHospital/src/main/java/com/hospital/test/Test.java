@@ -18,13 +18,12 @@ public class Test {
     String mensaje = "";
 
     public void insertar() {
-       
-        emp.setNombre("Jenny");
-        emp.setApellido("Rrojas");
-        emp.setCorreo("Jenny@");
-        emp.setSalario(500);
-        emp.setTelefono("5621215");
+        emp.setNombre("Allan");
+        emp.setApellido("Perez");
+        emp.setCorreo("allan@");
         emp.setFecha_Contratacion("13-02");
+        emp.setTelefono("548541");
+        emp.setSalario(200);
         mensaje = ebo.agregarEmpleado(emp);
         System.out.println(mensaje);
     }
