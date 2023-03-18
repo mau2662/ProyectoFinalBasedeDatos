@@ -18,11 +18,13 @@ public class Test {
     String mensaje = "";
 
     public void insertar() {
+       
         emp.setNombre("Jenny");
         emp.setApellido("Rrojas");
         emp.setCorreo("Jenny@");
         emp.setSalario(500);
-        emp.setTelefono("8969315");
+        emp.setTelefono("5621215");
+        emp.setFecha_Contratacion("13-02");
         mensaje = ebo.agregarEmpleado(emp);
         System.out.println(mensaje);
     }
@@ -31,5 +33,5 @@ public class Test {
         Test test = new Test();
         test.insertar();
     }
-    
+
 }

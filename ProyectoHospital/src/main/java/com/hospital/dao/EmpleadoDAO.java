@@ -20,7 +20,7 @@ public class EmpleadoDAO {
 
     public String agregarEmpleado(Connection con, Empleado emp) {
         PreparedStatement pst = null;
-        String sql = "INSERT INTO EMPLEADO (ID_EMPLEADO, NOMBRE"
+        String sql = "INSERT INTO GENERICO.EMPLEADO (ID_EMPLEADO, NOMBRE"
                 + "APELLIDO, CORREO,TELEFONO,FECHA_CONTRATACION, SALARIO)"
                 + "VALUES(EMPLEADO_SEQ.NEXVAL,?,?,?,?,?)";
 
