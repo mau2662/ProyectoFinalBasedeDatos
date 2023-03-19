@@ -28,9 +28,28 @@ public class Test {
         System.out.println(mensaje);
     }
 
+    public void modificar() {
+        emp.setId_Empleado(3);
+        emp.setNombre("Ale");
+        emp.setApellido("Rojas");
+        emp.setCorreo("ale@");
+        emp.setFecha_Contratacion("13-02");
+        emp.setTelefono("548541");
+        emp.setSalario(100);
+        mensaje = ebo.modificarEmpleado(emp);
+        System.out.println(mensaje);
+    }
+    
+       public void eliminar() {
+                mensaje = ebo.eliminarEmpleado(5);
+        System.out.println(mensaje);
+    }
+
     public static void main(String[] args) {
         Test test = new Test();
-        test.insertar();
+     // test.insertar();
+       // test.modificar();
+       test.eliminar();
     }
 
 }

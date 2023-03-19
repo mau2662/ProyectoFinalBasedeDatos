@@ -21,8 +21,6 @@ public class EmpleadoDAO {
     public String agregarEmpleado(Connection con, Empleado emp) {
         PreparedStatement pst = null;
         String sql = "INSERT INTO GENERICO.EMPLEADO VALUES(3,?,?,?,?,?,?)";
-                
-                
 
         try {
             pst = con.prepareStatement(sql);
@@ -47,8 +45,7 @@ public class EmpleadoDAO {
 
     public String modificarEmpleado(Connection con, Empleado emp) {
         PreparedStatement pst = null;
-        String sql = "UPDATE EMPLEADO SET NOMBRE = ?, APELLIDO =?, CORREO=?"
-                + "FECHA_CONTRATACION=?, TELEFONO=?,SALARIO=?"
+        String sql = "UPDATE GENERICO.EMPLEADO SET NOMBRE= ?, APELLIDO =?, CORREO=?, FECHA_CONTRATACION=?, TELEFONO=?,SALARIO=? "
                 + "WHERE ID_EMPLEADO =?";
 
         try {
@@ -60,7 +57,7 @@ public class EmpleadoDAO {
             pst.setString(5, emp.getTelefono());
             pst.setInt(6, emp.getSalario());
             pst.setInt(7, emp.getId_Empleado());
-            mensaje = "Actualizado Correctamente";
+            mensaje = "Modificado Correctamente";
             pst.execute();
             pst.close();
 
