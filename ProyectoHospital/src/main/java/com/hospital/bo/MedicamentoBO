@@ -1,0 +1,81 @@
+package com.hospital.bo;
+
+import com.hospital.dao.MedicamentoDAO;
+import com.hospital.db.Conexion;
+import com.hospital.entity.Medicamento;
+import java.sql.Connection;
+
+
+public class MedicamentoBO {
+
+    private String mensaje = "";
+    private MedicamentoDAO mdao = new MedicamentoDAO();
+
+    public String agregarMedicamento(Medicamento med) {
+        Connection conn = Conexion.getConnection();
+        try {
+            mensaje = mdao.agregarMedicamento(conn, med);
+
+        } catch (Exception e) {
+            mensaje = mensaje + " " + e.getMessage();
+
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                mensaje = mensaje + " " + e.getMessage();
+            }
+        }
+        return mensaje;
+
+    }
+
+    public String modificarMedicamento(Medicamento med) {
+
+        Connection conn = Conexion.getConnection();
+        try {
+            mensaje = mdao.modificarMedicamento(conn, med);
+
+        } catch (Exception e) {
+            mensaje = mensaje + " " + e.getMessage();
+
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                mensaje = mensaje + " " + e.getMessage();
+            }
+        }
+        return mensaje;
+
+    }
+
+    public String eliminarMedicamento(int id) {
+        Connection conn = Conexion.getConnection();
+        try {
+            mensaje = mdao.eliminarMedicamento(conn, id);
+
+        } catch (Exception e) {
+            mensaje = mensaje + " " + e.getMessage();
+
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                mensaje = mensaje + " " + e.getMessage();
+            }
+        }
+        return mensaje;
+
+    }
+
+    public void listarMedicamento() {
+
+    }
+}
