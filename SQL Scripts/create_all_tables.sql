@@ -90,6 +90,5 @@ CREATE TABLE MEDICAMENTO (
   CONSTRAINT MEDICAMENTO_PK PRIMARY KEY (ID_MEDICAMENTO)
 );
 
-Transform this table into a model class for .net core entity framework
 
 
