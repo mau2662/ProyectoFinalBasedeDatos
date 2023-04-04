@@ -10,7 +10,9 @@ namespace ProyectoLenguajesNetCore.Data
             : base(options)
         {
         }
-        public DbSet<ProyectoLenguajesNetCore.Models.Client>? Client { get; set; }
+        public DbSet<ProyectoLenguajesNetCore.Models.CLIENTE>? Client { get; set; }
         public DbSet<ProyectoLenguajesNetCore.Models.MEDICAMENTO>? MEDICAMENTO { get; set; }
+        public DbSet<ProyectoLenguajesNetCore.Models.ALMACEN>? ALMACEN { get; set; }
+        public DbSet<ProyectoLenguajesNetCore.Models.FACTURA>? FACTURA { get; set; }
     }
 }

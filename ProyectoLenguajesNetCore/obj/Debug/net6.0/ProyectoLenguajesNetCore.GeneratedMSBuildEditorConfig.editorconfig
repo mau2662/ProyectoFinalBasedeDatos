@@ -20,24 +20,64 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clients/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xDcmVhdGUuY3NodG1s
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Almacenes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clients/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xEZWxldGUuY3NodG1s
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Almacenes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clients/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Almacenes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clients/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xFZGl0LmNzaHRtbA==
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Almacenes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clients/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xJbmRleC5jc2h0bWw=
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Almacenes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Facturas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Facturas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Facturas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Facturas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Facturas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Home/Index.cshtml]
@@ -48,24 +88,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/MEDICAMENTOS/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTUVESUNBTUVOVE9TXENyZWF0ZS5jc2h0bWw=
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Medicamentos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/MEDICAMENTOS/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTUVESUNBTUVOVE9TXERlbGV0ZS5jc2h0bWw=
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Medicamentos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/MEDICAMENTOS/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTUVESUNBTUVOVE9TXERldGFpbHMuY3NodG1s
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Medicamentos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/MEDICAMENTOS/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTUVESUNBTUVOVE9TXEVkaXQuY3NodG1s
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Medicamentos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/MEDICAMENTOS/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTUVESUNBTUVOVE9TXEluZGV4LmNzaHRtbA==
+[C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Medicamentos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Lain/Documents/GitHub/ProyectoFinalBasedeDatos/ProyectoLenguajesNetCore/Views/Shared/Error.cshtml]

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProyectoLenguajesNetCore.Models.Client>
+﻿@model IEnumerable<ProyectoLenguajesNetCore.Models.FACTURA>
 
 @{
     ViewData["Title"] = "Index";
@@ -19,9 +19,6 @@
                 @Html.DisplayNameFor(model => model.APELLIDO)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GENERO)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CORREO)
             </th>
             <th>
@@ -29,6 +26,12 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TELEFONO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PRODUCTOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOTAL)
             </th>
             <th></th>
         </tr>
@@ -43,9 +46,6 @@
                 @Html.DisplayFor(modelItem => item.APELLIDO)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GENERO)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CORREO)
             </td>
             <td>
@@ -55,9 +55,15 @@
                 @Html.DisplayFor(modelItem => item.TELEFONO)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID_CLIENTE">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID_CLIENTE">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID_CLIENTE">Delete</a>
+                @Html.DisplayFor(modelItem => item.PRODUCTOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOTAL)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID_FACTURA">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID_FACTURA">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID_FACTURA">Delete</a>
             </td>
         </tr>
 }

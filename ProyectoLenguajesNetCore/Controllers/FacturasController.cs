@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,88 +10,87 @@ using ProyectoLenguajesNetCore.Models;
 
 namespace ProyectoLenguajesNetCore.Controllers
 {
-    [Authorize]
-    public class MedicamentosController : Controller
+    public class FacturasController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public MedicamentosController(ApplicationDbContext context)
+        public FacturasController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Medicamentos
+        // GET: Facturas
         public async Task<IActionResult> Index()
         {
-              return _context.MEDICAMENTO != null ? 
-                          View(await _context.MEDICAMENTO.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.MEDICAMENTO'  is null.");
+              return _context.FACTURA != null ? 
+                          View(await _context.FACTURA.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.FACTURA'  is null.");
         }
 
-        // GET: Medicamentos/Details/5
+        // GET: Facturas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.MEDICAMENTO == null)
+            if (id == null || _context.FACTURA == null)
             {
                 return NotFound();
             }
 
-            var mEDICAMENTO = await _context.MEDICAMENTO
-                .FirstOrDefaultAsync(m => m.ID_MEDICAMENTO == id);
-            if (mEDICAMENTO == null)
+            var fACTURA = await _context.FACTURA
+                .FirstOrDefaultAsync(m => m.ID_FACTURA == id);
+            if (fACTURA == null)
             {
                 return NotFound();
             }
 
-            return View(mEDICAMENTO);
+            return View(fACTURA);
         }
 
-        // GET: Medicamentos/Create
+        // GET: Facturas/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Medicamentos/Create
+        // POST: Facturas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID_MEDICAMENTO,NOMBRE,FARMACEUTICA,FECHA_INGRESO,FECHA_VENCIMIENTO")] MEDICAMENTO mEDICAMENTO)
+        public async Task<IActionResult> Create([Bind("ID_FACTURA,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,PRODUCTOS,TOTAL")] FACTURA fACTURA)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(mEDICAMENTO);
+                _context.Add(fACTURA);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(mEDICAMENTO);
+            return View(fACTURA);
         }
 
-        // GET: Medicamentos/Edit/5
+        // GET: Facturas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.MEDICAMENTO == null)
+            if (id == null || _context.FACTURA == null)
             {
                 return NotFound();
             }
 
-            var mEDICAMENTO = await _context.MEDICAMENTO.FindAsync(id);
-            if (mEDICAMENTO == null)
+            var fACTURA = await _context.FACTURA.FindAsync(id);
+            if (fACTURA == null)
             {
                 return NotFound();
             }
-            return View(mEDICAMENTO);
+            return View(fACTURA);
         }
 
-        // POST: Medicamentos/Edit/5
+        // POST: Facturas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID_MEDICAMENTO,NOMBRE,FARMACEUTICA,FECHA_INGRESO,FECHA_VENCIMIENTO")] MEDICAMENTO mEDICAMENTO)
+        public async Task<IActionResult> Edit(int id, [Bind("ID_FACTURA,NOMBRE,APELLIDO,CORREO,DIRECCION,TELEFONO,PRODUCTOS,TOTAL")] FACTURA fACTURA)
         {
-            if (id != mEDICAMENTO.ID_MEDICAMENTO)
+            if (id != fACTURA.ID_FACTURA)
             {
                 return NotFound();
             }
@@ -101,12 +99,12 @@ namespace ProyectoLenguajesNetCore.Controllers
             {
                 try
                 {
-                    _context.Update(mEDICAMENTO);
+                    _context.Update(fACTURA);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MEDICAMENTOExists(mEDICAMENTO.ID_MEDICAMENTO))
+                    if (!FACTURAExists(fACTURA.ID_FACTURA))
                     {
                         return NotFound();
                     }
@@ -117,49 +115,49 @@ namespace ProyectoLenguajesNetCore.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(mEDICAMENTO);
+            return View(fACTURA);
         }
 
-        // GET: Medicamentos/Delete/5
+        // GET: Facturas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.MEDICAMENTO == null)
+            if (id == null || _context.FACTURA == null)
             {
                 return NotFound();
             }
 
-            var mEDICAMENTO = await _context.MEDICAMENTO
-                .FirstOrDefaultAsync(m => m.ID_MEDICAMENTO == id);
-            if (mEDICAMENTO == null)
+            var fACTURA = await _context.FACTURA
+                .FirstOrDefaultAsync(m => m.ID_FACTURA == id);
+            if (fACTURA == null)
             {
                 return NotFound();
             }
 
-            return View(mEDICAMENTO);
+            return View(fACTURA);
         }
 
-        // POST: Medicamentos/Delete/5
+        // POST: Facturas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.MEDICAMENTO == null)
+            if (_context.FACTURA == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.MEDICAMENTO'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.FACTURA'  is null.");
             }
-            var mEDICAMENTO = await _context.MEDICAMENTO.FindAsync(id);
-            if (mEDICAMENTO != null)
+            var fACTURA = await _context.FACTURA.FindAsync(id);
+            if (fACTURA != null)
             {
-                _context.MEDICAMENTO.Remove(mEDICAMENTO);
+                _context.FACTURA.Remove(fACTURA);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool MEDICAMENTOExists(int id)
+        private bool FACTURAExists(int id)
         {
-          return (_context.MEDICAMENTO?.Any(e => e.ID_MEDICAMENTO == id)).GetValueOrDefault();
+          return (_context.FACTURA?.Any(e => e.ID_FACTURA == id)).GetValueOrDefault();
         }
     }
 }

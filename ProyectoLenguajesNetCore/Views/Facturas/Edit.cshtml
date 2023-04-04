@@ -1,4 +1,4 @@
-﻿@model ProyectoLenguajesNetCore.Models.Client
+﻿@model ProyectoLenguajesNetCore.Models.FACTURA
 
 @{
     ViewData["Title"] = "Edit";
@@ -6,13 +6,13 @@
 
 <h1>Edit</h1>
 
-<h4>Client</h4>
+<h4>FACTURA</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID_CLIENTE" />
+            <input type="hidden" asp-for="ID_FACTURA" />
             <div class="form-group">
                 <label asp-for="NOMBRE" class="control-label"></label>
                 <input asp-for="NOMBRE" class="form-control" />
@@ -22,11 +22,6 @@
                 <label asp-for="APELLIDO" class="control-label"></label>
                 <input asp-for="APELLIDO" class="form-control" />
                 <span asp-validation-for="APELLIDO" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="GENERO" class="control-label"></label>
-                <input asp-for="GENERO" class="form-control" />
-                <span asp-validation-for="GENERO" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CORREO" class="control-label"></label>
@@ -42,6 +37,16 @@
                 <label asp-for="TELEFONO" class="control-label"></label>
                 <input asp-for="TELEFONO" class="form-control" />
                 <span asp-validation-for="TELEFONO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTOS" class="control-label"></label>
+                <input asp-for="PRODUCTOS" class="form-control" />
+                <span asp-validation-for="PRODUCTOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TOTAL" class="control-label"></label>
+                <input asp-for="TOTAL" class="form-control" />
+                <span asp-validation-for="TOTAL" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
