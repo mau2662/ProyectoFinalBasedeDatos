@@ -308,3 +308,65 @@ CREATE OR REPLACE PROCEDURE select_factura(
 BEGIN
     OPEN P_FACTURA FOR SELECT * FROM FACTURA;
 END;
+
+
+-- ***** TRIGGERS *****
+
+-- Eliminar Cliente Trigger
+
+CREATE TRIGGER eliminar_cliente
+BEFORE DELETE ON CLIENTE
+FOR EACH ROW
+DECLARE
+  relacionado NUMBER;
+BEGIN
+  SELECT COUNT (*) INTO relacionado FROM otras_tablas WHERE ID_CLIENTE = :OLD.ID;
+  IF relacionado > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede elimar este cliente debido a que está relacionado con otras tablas');
+  END IF;
+END
+
+
+-- Eliminar Medicamento Trigger
+
+CREATE TRIGGER eliminar_medicamento   
+BEFORE DELETE ON MEDICAMENTO
+FOR EACH ROW
+DECLARE
+  relacionado NUMBER;
+BEGIN
+  SELECT COUNT (*) INTO relacionado FROM otras_tablas WHERE ID_MEDICAMENTO = :OLD.ID;
+  IF relacionado > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede elimar este medicamento debido a que está relacionado con otras tablas');
+  END IF;
+END
+
+
+-- Eliminar Almacén Trigger
+
+CREATE TRIGGER eliminar_almacen
+BEFORE DELETE ON ALMACEN
+FOR EACH ROW
+DECLARE
+  relacionado NUMBER;
+BEGIN
+  SELECT COUNT (*) INTO relacionado FROM otras_tablas WHERE ID_ESTANTE = :OLD.ID;
+  IF relacionado > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede elimar este almacén debido a que está relacionado con otras tablas');
+  END IF;
+END
+
+
+-- Eliminar Factura Trigger
+
+CREATE TRIGGER eliminar_factura
+BEFORE DELETE ON FACTURA
+FOR EACH ROW
+DECLARE
+  relacionado NUMBER;
+BEGIN
+  SELECT COUNT (*) INTO relacionado FROM otras_tablas WHERE ID_FACTURA = :OLD.ID;
+  IF relacionado > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede elimar esta factura debido a que está relacionado con otras tablas');
+  END IF;
+END
